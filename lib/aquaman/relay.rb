@@ -1,12 +1,11 @@
-require "rpi_gpio"
+# frozen_string_literal: true
 
 module Aquaman
-  class RelayController
+  class Relay
 
     RELAY_CONTROL_PIN = 3
 
     def initialize
-      RPi::GPIO.set_numbering :board
       RPi::GPIO.setup RELAY_CONTROL_PIN, as: :output
     end
 
@@ -23,10 +22,6 @@ module Aquaman
 
     def disable
       RPi::GPIO.set_high RELAY_CONTROL_PIN
-    end
-
-    def shutdown
-      RPi::GPIO.reset
     end
 
   end
