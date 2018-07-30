@@ -1,16 +1,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "aquaman/version"
+require "aquaman-controller/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "aquaman"
-  spec.version       = Aquaman::VERSION
+  spec.name          = "aquaman-controller"
+  spec.version       = AquamanController::VERSION
   spec.authors       = ["Mark King"]
   spec.email         = ["mark@vemek.co"]
 
-  spec.summary       = "An automated plant watering system for Raspberry Pi"
-  spec.description   = "An automated plant watering system for Raspberry Pi"
+  spec.summary       = "Gem to control a water pump and moisture sensor attached to Raspberry Pi"
+  spec.description   = "Gem to control a water pump and moisture sensor attached to Raspberry Pi"
   spec.homepage      = "https://github.com/vemek/aquaman"
   spec.license       = "MIT"
 
@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency     "rpi_gpio", "~> 0.3.3"
 
   spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_development_dependency "pry"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "pry"
 end

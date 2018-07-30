@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require "rpi_gpio"
-require "aquaman/version"
-require "aquaman/relay"
-require "aquaman/sensor"
+require "aquaman-controller/version"
+require "aquaman-controller/relay"
+require "aquaman-controller/sensor"
 
-module Aquaman
+module AquamanController
 
   def self.setup
     RPi::GPIO.set_numbering(:board)

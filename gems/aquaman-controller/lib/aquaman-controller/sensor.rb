@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Aquaman
+module AquamanController
   class Sensor
 
     SENSOR_PIN = 7
